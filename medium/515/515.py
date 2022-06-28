@@ -19,7 +19,6 @@ class Solution:
       queue,res =Deque([root]), []
       if root:
         queue.append(root)
-      
       while queue:
         max = -sys.maxsize-1
         for i in range(len(queue)):
