@@ -9,5 +9,4 @@ function maximumSum(arr: number[]): number {
   }
   return res
 }
-console.log(maximumSum([1, -2, 0, 3]))
 

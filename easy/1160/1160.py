@@ -1,8 +1,7 @@
 # str = 'abcka'
 # print(str.count('a'))
 import collections
-from typing import Collection
-
+from typing import Collection, List
 
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
@@ -13,3 +12,5 @@ class Solution:
             if all([cnt_w[i]<cnt[i] for i in w]):
                 res += len(w)
         return res
+# p = Solution()
+# p.countCharacters(['a'],'a')
