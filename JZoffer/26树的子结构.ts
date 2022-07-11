@@ -12,7 +12,7 @@
  * }
  */
 
- function isSubStructure(A: TreeNode | null, B: TreeNode | null): boolean {
+function isSubStructure(A: TreeNode | null, B: TreeNode | null): boolean {
   // if(!B){
   //   return false;
   // }
@@ -47,29 +47,29 @@
   //     return false
   //   }
   // }
-  if(!B){
+  if (!B)
     return false
-  }
-  const recur = (A: TreeNode | null , B: TreeNode | null): boolean => {
-    if(B===null){
+
+  const recur = (A: TreeNode | null, B: TreeNode | null): boolean => {
+    if (B === null)
       return true
-    }
-    if(A === null || A.val !== B.val){
+
+    if (A === null || A.val !== B.val)
       return false
-    }
-    return recur(A.left,B.left) && recur(A.right,B.right)
+
+    return recur(A.left, B.left) && recur(A.right, B.right)
   }
-  const isChildrenTree = (A: TreeNode | null , B : TreeNode | null): boolean => {
-    if(A===null){
+  const isChildrenTree = (A: TreeNode | null, B: TreeNode | null): boolean => {
+    if (A === null)
       return false
-    }
-    if(B === null){
+
+    if (B === null)
       return true
-    }
-    if(A.val === B.val){
-      return recur(A,B)
-    }
-    return isChildrenTree(A.left,B) || isChildrenTree(A.right,B)
+
+    if (A.val === B.val)
+      return recur(A, B)
+
+    return isChildrenTree(A.left, B) || isChildrenTree(A.right, B)
   }
-  return isChildrenTree(A,B)
-};
+  return isChildrenTree(A, B)
+}
