@@ -12,5 +12,7 @@ class Solution:
         else :
           s.add(nums[i])
       return res
+
 p = Solution()
 print(p.findRepeatNumber([1,2,3,2]))
+
