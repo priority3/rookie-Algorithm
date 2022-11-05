@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+const lengthOfLIS = function (nums) {
+  const tails = []
+  for (const k of nums.keys()) {
+    const num = nums[k]
+    if (tails.length === 0 || num > nums[tails[tails.length - 1]]) {
+      tails.push(k)
+    }
+    else if (num === nums[tails[tails.length - 1]]) {
+      continue
+    }
+    else {
+      let i = 0; let j = tails.length
+      while (i < j) {
+        const mid = parseInt((i + j) / 2)
+        if (nums[tails[mid]] < num)
+          i = mid + 1
+        else j = mid
+      }
+      tails[j] = k
+    }
+    console.log(tails)
+  }
+  console.log(tails)
+  return tails.length
+}
+lengthOfLIS([2, 3, 1, 5, 6, 8, 7, 9, 4])
+</script>
+</html>
