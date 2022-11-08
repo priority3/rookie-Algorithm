@@ -2,9 +2,10 @@ from itertools import product
 from typing import List
 
 
-
 class Solution:
+
     def ambiguousCoordinates(self, s: str) -> List[str]:
+
         def get_pos(s: str) -> List[str]:
             pos = []
             if s[0] != '0' or s == '0':
@@ -17,7 +18,8 @@ class Solution:
 
         n = len(s) - 2
         res = []
-        s = s[1: len(s) - 1]
+        s = s[1:len(s) - 1]
+        # 123
         for l in range(1, n):
             lt = get_pos(s[:l])
             if len(lt) == 0:
@@ -28,3 +30,7 @@ class Solution:
             for i, j in product(lt, rt):
                 res.append('(' + i + ', ' + j + ')')
         return res
+
+
+p = Solution()
+print(p.ambiguousCoordinates("(0123)"))
