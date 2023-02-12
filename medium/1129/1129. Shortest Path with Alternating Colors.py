@@ -17,6 +17,7 @@ class Solution:
       graph[u].append((v, Color.kRed))
     for u, v in blueEdges:
       graph[u].append((v, Color.kBlue))
+    print(graph)
     queue = collections.deque([(0, Color.kInit)])
     step = 0
     while queue:
