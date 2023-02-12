@@ -1,6 +1,7 @@
 node_modules
 *.exe
 .vscode/tasks.json
+src
 target
 Cargo.lock
 .idea

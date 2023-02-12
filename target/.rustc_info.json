@@ -1,6 +1,13 @@
 {
   "rustc_fingerprint": 12984136261844132282,
   "outputs": {
+    "15697416045686424142": {
+      "success": true,
+      "status": "",
+      "code": 0,
+      "stdout": "___.exe\nlib___.rlib\n___.dll\n___.dll\n___.lib\n___.dll\n",
+      "stderr": ""
+    },
     "10376369925670944939": {
       "success": true,
       "status": "",
@@ -13,13 +20,6 @@
       "status": "",
       "code": 0,
       "stdout": "rustc 1.65.0 (897e37553 2022-11-02)\nbinary: rustc\ncommit-hash: 897e37553bba8b42751c67658967889d11ecd120\ncommit-date: 2022-11-02\nhost: x86_64-pc-windows-msvc\nrelease: 1.65.0\nLLVM version: 15.0.0\n",
-      "stderr": ""
-    },
-    "15697416045686424142": {
-      "success": true,
-      "status": "",
-      "code": 0,
-      "stdout": "___.exe\nlib___.rlib\n___.dll\n___.dll\n___.lib\n___.dll\n",
       "stderr": ""
     }
   },
