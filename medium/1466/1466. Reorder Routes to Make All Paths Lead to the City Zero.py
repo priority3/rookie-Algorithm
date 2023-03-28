@@ -1,7 +1,6 @@
 from typing import List
 from collections import defaultdict
 
-
 class Solution:
 
     def minReorder(self, n: int, connections: List[List[int]]) -> int:
