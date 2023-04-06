@@ -14,16 +14,16 @@ class Solution:
             #     if spell * potions[j] >= success:
             #         count = plen - j
             #         break
-            
-            start , end = 0 , plen - 1
-            
+
+            start, end = 0, plen - 1
+
             while start <= end:
                 mid = (start + end) // 2
                 if spell * potions[mid] >= success:
                     end = mid - 1
                 else:
                     start = mid + 1
-            res.append(plen-start if start < plen else 0)
+            res.append(plen - start if start < plen else 0)
 
         print(res)
 
