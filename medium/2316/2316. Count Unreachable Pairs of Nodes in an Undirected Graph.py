@@ -5,7 +5,6 @@ class Solution:
 
     def countPairs(self, n: int, edges: List[List[int]]) -> int:
         map = [[] for _ in range(n)]
-
         for i in range(len(edges)):
             map[edges[i][0]].append(edges[i][1])
             map[edges[i][1]].append(edges[i][0])
