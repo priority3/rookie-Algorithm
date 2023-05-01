@@ -31,9 +31,8 @@ def minPathSum(grid: List[List[int]]):
   # init dp
   for i in range(m):
     dp[i][0] = grid[i][0] + dp[i - 1][0]
-  for i in range(n):
+  for i in range(1, n):
     dp[0][i] = grid[0][i] + dp[0][i - 1]
-  print(dp)
   for i in range(m):
     for j in range(n):
       if i > 0 and j > 0:
@@ -44,4 +43,4 @@ def minPathSum(grid: List[List[int]]):
 if __name__ == '__main__':
   # print('frog problem:', dp_frog(10))
   # print('leetcode_62:', uniquePaths(3, 7))
-  print('leetcode_64:', minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]))
+  print('leetcode_64:', minPathSum([[1]]))
